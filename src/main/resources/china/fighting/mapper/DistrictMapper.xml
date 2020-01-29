@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="china.fighting.mapper.DistrictMapper">
+    <resultMap id="BaseResultMap" type="china.fighting.domain.District">
+        <result column="district_name" jdbcType="VARCHAR" property="districtName"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+    </resultMap>
+
+    <select id="getDistrictKey" resultType="java.lang.String">
+        select district_name from district where `type` = #{type} order by id asc
+    </select>
+</mapper>

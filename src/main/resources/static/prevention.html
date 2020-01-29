@@ -1,0 +1,134 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>新型冠状病毒 - 实时新闻，齐心协力、共克时艰</title>
+    <meta name="description" content="不信谣！不传谣！" />
+    <link rel="stylesheet" href="http://oss.dragon-yuan.me/static/index.css"/>
+    <script src="http://oss.dragon-yuan.me/static/vue.min.js"></script>
+    <script src="http://oss.dragon-yuan.me/static/vant.min.js"></script>
+    <script src="http://oss.dragon-yuan.me/static/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+
+        .t-cell-span {
+            display: block;
+            margin-bottom: 10px;
+            text-indent: 2em;
+        }
+
+        .t-cell-p {
+            display: inline;
+        }
+
+        .t-cell-p-red {
+            /*color: #ed4014;*/
+            display: inline;
+        }
+
+        .card {
+            margin-bottom: 24px;
+            padding: 24px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 8px 12px #ebedf0;
+        }
+
+        .my-swipe {
+            height: 200px;
+        }
+
+        .my-swipe .van-swipe-item {
+            color: #fff;
+            font-size: 20px;
+            line-height: 150px;
+            text-align: center;
+            background-color: #39a9ed;
+        }
+
+        .my-swipe-img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div style="display: none;">
+    <img src="http://oss.dragon-yuan.me/static/pic300.jpg"/>
+</div>
+<div id="app" v-cloak>
+    <div>
+        <van-notice-bar text="防控疫情，人人有责！呼吁大家：戴口罩、勤洗手、多通风、少聚集！健健康康过大年！" left-icon="volume-o"/>
+    </div>
+    <!-- 标签栏 -->
+    <van-tabbar v-model="tabActive" active-color="#ed4014" inactive-color="#000">
+        <van-tabbar-item icon="fire-o" url="index.html">新闻</van-tabbar-item>
+        <van-tabbar-item icon="description" url="prevention.html">预防</van-tabbar-item>
+    </van-tabbar>
+
+    <div>
+        <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+            <van-swipe-item v-for="(image, index) in images" :key="index">
+                <img class="my-swipe-img" :src="image" />
+            </van-swipe-item>
+        </van-swipe>
+        <van-cell>
+            <template slot="title">
+                <div class="card">
+                    <div>
+                        <van-tag size="medium" type="primary">公众预防</van-tag>
+                        <span class="custom-title">根据中疾控和世界卫生组织各方专家的观点，公众预防应注意以下四个方面：</span>
+                    </div>
+                    <div style="margin-top: 5px;">
+                        <div class="t-cell">
+                        <span class="t-cell-span">
+                            <p class="t-cell-p t-cell-p-red">一是勤洗手：</p>
+                            <p class="t-cell-p">包括在制备食品之前、期间和之后、咳嗽或打喷嚏后、照护病人时、饭前便后、手脏时、在处理动物或动物排泄物后，
+                            立刻用肥皂、含有酒精的洗手液和清水洗手。</p>
+                        </span>
+                        <span class="t-cell-span">
+                            <p class="t-cell-p t-cell-p-red">二是主动防护：</p>
+                            <p class="t-cell-p">在自己咳嗽或打喷嚏时，应用纸巾或袖口或屈肘将口鼻完全遮住，并将用过的纸巾立刻扔进封闭式垃圾箱内，并洗手。
+                            易感人群应尽量避免去人群密集的公共场所，可佩戴口罩减少接触病原风险。
+                            避免在未加防护情况下与病人密切接触，避免触摸其眼、口、鼻。
+                            同时注意保持家庭和工作场所开窗通风，环境清洁。</p>
+                        </span>
+                            <span class="t-cell-span">
+                            <p class="t-cell-p t-cell-p-red">三是避免密切接触：</p>
+                            <p class="t-cell-p">尽量避免在未加防护情况下与养殖或野生动物近距离接触、避免与生病的动物和变质的肉接触、
+                            避免与生鲜市场里的流浪动物、垃圾废水接触。</p>
+                        </span>
+                            <span class="t-cell-span">
+                            <p class="t-cell-p t-cell-p-red">四是良好安全饮食习惯：</p>
+                            <p class="t-cell-p">将肉和蛋类彻底煮熟食用，处理生食和熟食之间要洗手，切菜板及刀具要分开。</p>
+                        </span>
+                        </div>
+                        <van-divider dashed></van-divider>
+                    </div>
+                </div>
+            </template>
+        </van-cell>
+    </div>
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabActive: 1,
+                images: [
+                    'http://oss.dragon-yuan.me/static/image/20200126113726.jpg',
+                    'http://oss.dragon-yuan.me/static/image/20200126113916.jpg'
+                ]
+            }
+        },
+        created() {
+        },
+        methods: {}
+    })
+</script>
+</html>

@@ -1,0 +1,175 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>新型冠状病毒 - 实时新闻，齐心协力、共克时艰</title>
+    <meta name="description" content="不信谣！不传谣！" />
+    <link rel="stylesheet" href="http://oss.dragon-yuan.me/static/index.css"/>
+    <script src="http://oss.dragon-yuan.me/static/vue.min.js"></script>
+    <script src="http://oss.dragon-yuan.me/static/vant.min.js"></script>
+    <script src="http://oss.dragon-yuan.me/static/jquery.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+    <style type="text/css">
+        [v-cloak] {
+            display: none;
+        }
+
+        .t-cell {
+            margin-top: 3px;
+            color: #969799;
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .van-cell:not(:last-child)::after {
+            border-bottom: none !important;
+        }
+    </style>
+</head>
+<body>
+<div style="display: none;">
+    <img src="http://oss.dragon-yuan.me/static/pic300.jpg"/>
+</div>
+<div id="app" v-cloak>
+    <div>
+        <van-notice-bar text="防控疫情，人人有责！呼吁大家：戴口罩、勤洗手、多通风、少聚集！健健康康过大年！" left-icon="volume-o"/>
+    </div>
+    <!-- 标签栏 -->
+    <van-tabbar v-model="tabActive" active-color="#ed4014" inactive-color="#000">
+        <van-tabbar-item icon="fire-o" url="index.html">新闻</van-tabbar-item>
+        <van-tabbar-item icon="description" url="prevention.html">预防</van-tabbar-item>
+    </van-tabbar>
+
+    <div>
+        <van-search v-model="searchKey" placeholder="请输入搜索关键词、如：武汉" @search="onSearch"/>
+    </div>
+    <van-pull-refresh v-model="refreshing" @refresh="onRefresh">
+        <van-list
+                v-model="loading"
+                :finished="finished"
+                finished-text="没有更多了"
+                :error.sync="error"
+                error-text="请求失败，点击重新加载"
+                @load="onLoad('')"
+        >
+            <div v-for="item in list" :key="item">
+                <van-cell is-link :url="item.url">
+                    <template slot="title">
+                        <van-tag  type="danger">{{item.cityKey}}</van-tag>
+                        <span class="custom-title">{{item.fromName}}</span>
+                        <div style="margin-top: 5px;">
+                            <div class="t-cell">发布时间：{{item.sendTime}}</div>
+                            <div class="t-cell" style="color: #515a6e; margin-top: 5px; font-size: 14px;"
+                                 v-html="item.content">
+                            </div>
+                        </div>
+                    </template>
+                </van-cell>
+                <van-divider dashed></van-divider>
+            </div>
+        </van-list>
+    </van-pull-refresh>
+</div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                tabActive: 0,
+                searchKey: '',
+                list: [],
+                loading: false,
+                finished: false,
+                error: false,
+                refreshing: false,
+                page: 1,
+            }
+        },
+        created() {
+        },
+        methods: {
+            onSearch() {
+                let _this = this;
+                // 清空初始化数据
+                _this.list = [];
+                _this.page = 1;
+                // 重新加载数据
+                _this.onLoad('search');
+            },
+            onRefresh() {
+                let _this = this;
+                // 清空初始化数据
+                _this.list = [];
+                _this.page = 1;
+                // 重新加载数据
+                _this.onLoad('refresh');
+            },
+            onLoad(operate) {
+                let _this = this;
+                _this.error = false;
+                _this.finished = false;
+                _this.loading = true;
+                // 参数
+                let params = {
+                    search: _this.searchKey,
+                    page: _this.page
+                };
+                $.ajax({
+                    url: '/api/news/query',
+                    type: 'post',
+                    data: JSON.stringify(params),
+                    contentType: 'application/json',
+                    success: function (res) {
+                        let code = res.code;
+                        if (code != null && code !== '' && code === 200) {
+                            // 数据分页处理
+                            if (_this.page > res.result.lastPage) {
+                                _this.finished = true;
+                                return;
+                            } else {
+                                _this.page++;
+                            }
+                            // 获取结果
+                            let result = res.result.list;
+                            if (result != null && result.length > 0) {
+                                for (let i = 0; i < result.length; i++) {
+                                    _this.list.push(result[i]);
+                                }
+                            }
+                            // 刷新操作
+                            if ('refresh' === operate) {
+                                vant.Toast('已为您展示最新消息');
+                                _this.refreshing = false;
+                            }
+                            // 搜索操作
+                            if ('search' === operate) {
+                                vant.Toast('已为您展示搜索结果');
+                                _this.refreshing = false;
+                            }
+                        } else {
+                            console.log('api res =', res);
+                            _this.error = true;
+                        }
+                        _this.loading = false;
+                    },
+                    error: function (e) {
+                        console.log('api error =', e);
+                        _this.loading = false;
+                        _this.error = true;
+                    }
+                });
+            }
+        }
+    })
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?a997feca9d420d9af3eefa822baeaa62";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</html>

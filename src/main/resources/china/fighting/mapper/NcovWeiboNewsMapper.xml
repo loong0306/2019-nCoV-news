@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="china.fighting.mapper.NcovWeiboNewsMapper">
+    <resultMap id="BaseResultMap" type="china.fighting.domain.NcovWeiboNews">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="city_key" jdbcType="VARCHAR" property="cityKey"/>
+        <result column="source_id" jdbcType="VARCHAR" property="sourceId"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="content" jdbcType="VARCHAR" property="content"/>
+        <result column="send_time" jdbcType="VARCHAR" property="sendTime"/>
+        <result column="from_id" jdbcType="VARCHAR" property="fromId"/>
+        <result column="from_name" jdbcType="VARCHAR" property="fromName"/>
+        <result column="ts" jdbcType="TIMESTAMP" property="ts"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+      id, city_key, source_id, url, content, send_time, from_id, from_name, ts
+    </sql>
+
+    <sql id="Search_List">
+      city_key, source_id, url, content, send_time, from_name
+    </sql>
+
+    <sql id="Api_Search_List">
+      source_id, url, content, send_time, from_name
+    </sql>
+
+    <!-- 分页关键字查询新闻列表 -->
+    <select id="getNewsList" resultType="china.fighting.model.vo.NcovWeiboNewsVO">
+        select
+        <include refid="Search_List" />
+        from ncov_weibo_news
+        <if test="search != null and search != ''">
+            where `content` like concat('%', #{search}, '%')
+        </if>
+        order by ts desc
+    </select>
+
+    <!-- 提供API使用 - 分页关键字查询新闻列表 -->
+    <select id="getNewsListForApi" resultType="china.fighting.model.vo.NcovWeiboNewsApiVO">
+        select
+        <include refid="Api_Search_List" />
+        from ncov_weibo_news
+        <if test="search != null and search != ''">
+            where `content` like concat('%', #{search}, '%')
+        </if>
+        order by ts desc
+    </select>
+</mapper>
