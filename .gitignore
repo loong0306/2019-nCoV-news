@@ -27,4 +27,5 @@ mvn*
 cfg.properties
 application-local.yml
 src/main/resources/cfg.properties
-src/main/resources/application-local.yml
+src/main/resources/application.yml
+application.yml
