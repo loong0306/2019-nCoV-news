@@ -11,3 +11,9 @@
 
 **开放API接口：http://ncov.news.dragon-yuan.me/api/news?search=&page=**
 **API接口实例数据：https://github.com/dragon-yuan/2019-nCoV-news/blob/master/api_data_demo.json**
+
+2020年的春节，没有往常的那么热闹。响应国家号召，过年没有出门，在家淦了个小程序
+
+希望新型冠状病毒早日kill掉，我的程序也可以早日下线🙏
+
+武汉加油！中国加油！天佑中华 🇨🇳！ 
