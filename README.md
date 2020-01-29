@@ -20,6 +20,4 @@
 武汉加油！中国加油！天佑中华 🇨🇳！ 
 
 #### 项目展示：
-<p align="center">
 <img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-news-image.png" width="260px" height="460px">
-</p>
