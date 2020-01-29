@@ -1,3 +1,30 @@
-# Project exclude paths
-/out/
-/target/
+# maven ignore
+target/
+.metadata/
+*.jar
+*.war
+*.zip
+*.tar
+*.tar.gz
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+logs
+.mvn
+.springBeans
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+mvn*
+.apt_generated/
+
+# important files
+cfg.properties
+application-local.yml
+src/main/resources/cfg.properties
+src/main/resources/application-local.yml
