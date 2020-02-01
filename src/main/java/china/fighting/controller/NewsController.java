@@ -1,6 +1,7 @@
 package china.fighting.controller;
 
 import china.fighting.annotation.BusinessLog;
+import china.fighting.annotation.PrintParam;
 import china.fighting.constants.GlobalConstant;
 import china.fighting.model.dto.QueryNewsDTO;
 import china.fighting.model.vo.NcovWeiboNewsVO;
@@ -40,6 +41,7 @@ public class NewsController {
      * @author dragon
      * @date 2020/1/25 1:36 下午
      */
+    @PrintParam
     @ResponseBody
     @RequestMapping(value = "/query", method = {RequestMethod.POST})
     @BusinessLog(logInfo = "查询新闻")

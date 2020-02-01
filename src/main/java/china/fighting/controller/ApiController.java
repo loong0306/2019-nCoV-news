@@ -1,6 +1,7 @@
 package china.fighting.controller;
 
 import china.fighting.annotation.BusinessLog;
+import china.fighting.annotation.PrintParam;
 import china.fighting.constants.GlobalConstant;
 import china.fighting.model.vo.NcovWeiboNewsApiVO;
 import china.fighting.model.wrap.WrapMapper;
@@ -39,6 +40,7 @@ public class ApiController {
      * @author dragon
      * @date 2020/1/28 7:36 下午
      */
+    @PrintParam
     @ResponseBody
     @RequestMapping(value = "/news", method = {RequestMethod.GET})
     @BusinessLog(logInfo = "API对外接口查询新闻")

@@ -29,8 +29,6 @@ public class PrintParamAspect {
         Object[] args = joinPoint.getArgs();
         String dateFormat = "yyyy-MM-dd HH:mm:ss";
         log.info("方法调用开始: 方法名: {}, 入参: {}", methodName, JSONObject.toJSONStringWithDateFormat(args, dateFormat, SerializerFeature.WriteMapNullValue));
-        Object result = joinPoint.proceed();
-        log.info("方法调用结束: 方法名: {}, 回参: {}", methodName, JSONObject.toJSONStringWithDateFormat(result, dateFormat, SerializerFeature.WriteMapNullValue));
-        return result;
+        return joinPoint.proceed();
     }
 }
