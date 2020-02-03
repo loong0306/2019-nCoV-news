@@ -21,3 +21,7 @@
 
 #### 项目展示：
 <img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-news-image.png" width="260px" height="460px">
+
+
+#### 域名支持:
+2019-ncov.today 如有开源组织需要域名绑定，请与我联系
