@@ -8,6 +8,7 @@ import china.fighting.model.vo.NcovWeiboNewsVO;
 import china.fighting.model.wrap.WrapMapper;
 import china.fighting.model.wrap.Wrapper;
 import china.fighting.service.NcovWeiboNewsService;
+import china.fighting.utils.RedisOperationUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +17,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+
+import static china.fighting.constants.GlobalConstant.REDIS_API_TOTAL_KEY;
 
 /**
  * <p>Title: NewsController. </p>
@@ -32,6 +35,9 @@ public class NewsController {
     @Resource
     private NcovWeiboNewsService ncovWeiboNewsService;
 
+    @Resource
+    private RedisOperationUtils redisOperationUtils;
+
     /**
      * <p>Title: query. </p>
      * <p>Description: 查询新闻 </p>
@@ -47,6 +53,7 @@ public class NewsController {
     @BusinessLog(logInfo = "查询新闻")
     public Wrapper<PageInfo<NcovWeiboNewsVO>> query(@RequestBody QueryNewsDTO queryNewsDTO) {
         try {
+            redisOperationUtils.increment(REDIS_API_TOTAL_KEY, 1L);
             if (null == queryNewsDTO.getPage()) {
                 queryNewsDTO.setPage(GlobalConstant.PAGE_NUM);
             }

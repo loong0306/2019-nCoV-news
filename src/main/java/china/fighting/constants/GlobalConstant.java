@@ -38,4 +38,9 @@ public class GlobalConstant {
      * 分页大小
      */
     public static final Integer PAGE_SIZE = 20;
+
+    /**
+     * Redis接口计数器
+     */
+    public static final String REDIS_API_TOTAL_KEY = "api:total";
 }

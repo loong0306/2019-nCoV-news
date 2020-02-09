@@ -7,6 +7,7 @@ import china.fighting.model.vo.NcovWeiboNewsApiVO;
 import china.fighting.model.wrap.WrapMapper;
 import china.fighting.model.wrap.Wrapper;
 import china.fighting.service.NcovWeiboNewsService;
+import china.fighting.utils.RedisOperationUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+
+import static china.fighting.constants.GlobalConstant.REDIS_API_TOTAL_KEY;
 
 /**
  * <p>Title: ApiController. </p>
@@ -29,6 +32,8 @@ import java.util.List;
 public class ApiController {
     @Resource
     private NcovWeiboNewsService ncovWeiboNewsService;
+    @Resource
+    private RedisOperationUtils redisOperationUtils;
 
     /**
      * <p>Title: news. </p>
@@ -47,6 +52,7 @@ public class ApiController {
     public Wrapper<PageInfo<NcovWeiboNewsApiVO>> query(@RequestParam(value = "search", required = false, defaultValue = "") String search,
                                                        @RequestParam(value = "page", required = false, defaultValue = "1") int page) {
         try {
+            redisOperationUtils.increment(REDIS_API_TOTAL_KEY, 1L);
             PageHelper.startPage(page, GlobalConstant.PAGE_SIZE);
             List<NcovWeiboNewsApiVO> list = ncovWeiboNewsService.getNewsListForApi(search);
             PageInfo<NcovWeiboNewsApiVO> pageInfo = new PageInfo<>(list);

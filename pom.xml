@@ -7,7 +7,7 @@
     <artifactId>2019-ncov-today</artifactId>
     <name>2019-ncov-today</name>
     <packaging>jar</packaging>
-    <version>1.2</version>
+    <version>1.3</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
