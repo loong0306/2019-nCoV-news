@@ -20,12 +20,12 @@
 武汉加油！中国加油！天佑中华 🇨🇳！ 
 
 #### 项目展示：
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-news-image.png" width="260px" height="450px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-news-image.png?x-oss-process=style/webp" width="260px" height="450px">
 
 
 #### 域名支持:
 2019-ncov.today 如有开源组织需要域名绑定，请与我联系
 
 #### 百度浏览量记录：
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-1.jpg" height="260px" width="460px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-2.jpg" height="260px" width="460px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-1.jpg?x-oss-process=style/webp" height="260px" width="460px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-2.jpg?x-oss-process=style/webp" height="260px" width="460px">
