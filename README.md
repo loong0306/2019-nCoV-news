@@ -16,6 +16,7 @@
 2020年的春节，没有往常的那么热闹。响应国家号召，过年没有出门，在家淦了个小程序
 
 希望新型冠状病毒早日kill掉，我的程序也可以早日下线🙏
+项目与2020-04-10已下线，感谢朋友们的支持，数据会上传至github
 
 武汉加油！中国加油！天佑中华 🇨🇳！ 
 
@@ -33,7 +34,7 @@
 
 #### 数据分析（自2020-01-28 至 2020-04-10）：
 各大主流新闻媒体对新冠病毒的新闻发布分析图如下
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418120109.jpg?x-oss-process=style/webp" height="360px" width="620px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115703.jpg?x-oss-process=style/webp" height="360px" width="620px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115713.jpg?x-oss-process=style/webp" height="360px" width="620px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115924.jpg?x-oss-process=style/webp" height="360px" width="620px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418120109.jpg?x-oss-process=style/webp" height="380px" width="680px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115703.jpg?x-oss-process=style/webp" height="380px" width="680px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115713.jpg?x-oss-process=style/webp" height="380px" width="680px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115924.jpg?x-oss-process=style/webp" height="380px" width="680px">
