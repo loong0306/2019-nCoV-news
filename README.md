@@ -34,7 +34,7 @@
 
 #### 数据分析（自2020-01-28 至 2020-04-10）：
 各大主流新闻媒体对新冠病毒的新闻发布分析图如下
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418120109.jpg?x-oss-process=style/webp" height="360px" width="730px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115703.jpg?x-oss-process=style/webp" height="360px" width="730px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418120109.jpg?x-oss-process=style/webp" height="340px" width="730px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115703.jpg?x-oss-process=style/webp" height="390px" width="730px">
 <img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115713.jpg?x-oss-process=style/webp" height="360px" width="730px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115924.jpg?x-oss-process=style/webp" height="360px" width="730px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115924.jpg?x-oss-process=style/webp" height="420px" width="730px">
