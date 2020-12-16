@@ -28,8 +28,8 @@
 2019-ncov.today 如有开源组织需要域名绑定，请与我联系
 
 #### 百度浏览量记录：
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-1.jpg?x-oss-process=style/webp" height="260px" width="460px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-2.jpg?x-oss-process=style/webp" height="260px" width="460px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-1.jpg" height="260px" width="460px">
+<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-2.jpg" height="260px" width="460px">
 
 
 #### 数据分析（自2020-01-28 至 2020-04-10）：
