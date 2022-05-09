@@ -17,25 +17,3 @@
 
 希望新型冠状病毒早日kill掉，我的程序也可以早日下线🙏
 项目与2020-04-10已下线，感谢朋友们的支持，数据会上传至github
-
-武汉加油！中国加油！天佑中华 🇨🇳！ 
-
-#### 项目展示：
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-news-image.png?x-oss-process=style/webp" width="260px" height="450px">
-
-
-#### 域名支持:
-2019-ncov.today 如有开源组织需要域名绑定，请与我联系
-
-#### 百度浏览量记录：
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-1.jpg" height="260px" width="460px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/2019-ncov-baidu-2.jpg" height="260px" width="460px">
-
-
-#### 数据分析（自2020-01-28 至 2020-04-10）：
-各大主流新闻媒体对新冠病毒的新闻发布分析图如下
-
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418120109.jpg?x-oss-process=style/webp" height="325px" width="730px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115703.jpg?x-oss-process=style/webp" height="405px" width="730px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115713.jpg?x-oss-process=style/webp" height="360px" width="730px">
-<img src="https://img-dragon-blog.oss-cn-beijing.aliyuncs.com/github/imgs/ncov/20200418115924.jpg?x-oss-process=style/webp" height="440px" width="730px">
